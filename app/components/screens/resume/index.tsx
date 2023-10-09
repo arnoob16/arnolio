@@ -15,7 +15,6 @@ const Resume: React.FC = () => {
 				</a>
 			</div>
 			<section className="iframe-wrapper">
-				<embed src="/Arnab's_Resume.pdf" />
 				<iframe
 					src="/Arnab's_Resume.pdf"
 					frameBorder="0"
