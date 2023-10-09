@@ -3,5 +3,12 @@ export enum ProfileDetails {
     designation = "Software Developer",
     email = "contact.arnab16@gmail.com",
     mobile = "7004364281",
-    location = "Remote, India."
+    location = "Jamshedpur 💛, India."
 }
+
+export const NAVIGATION_MENU_ITEMS = [
+	"About",
+    "Resume",
+    "Projects",
+	"Contact", 
+];

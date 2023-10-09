@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -6,27 +7,36 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
-import Image from "next/image";
 import { ProfileDetails } from "@/app/constants";
+import React, { useRef, useState } from "react";
 
 const PersonalDetails: React.FC = () => {
+	const [isExpanded, setIsExpanded] = useState(false);
+	const handleExpandToggleClick = () => {
+		setIsExpanded((prev) => !prev);
+	};
 	return (
-		<aside className="sidebar" data-sidebar>
+		<aside className={`sidebar ${isExpanded ? "active" : ""}`} data-sidebar>
 			<div className="sidebar-info">
 				<figure className="avatar-box">
 					<img
 						src="/display-picture.png"
 						alt={`${ProfileDetails.name}'s Profile Picture`}
+						width={80}
 					/>
 				</figure>
 
 				<div className="info-content">
 					<h1 className="name">{ProfileDetails.name}</h1>
-
 					<p className="title">{ProfileDetails.designation}</p>
 				</div>
 
-				<button className="info_more-btn" data-sidebar-btn>
+				<button
+					className="info_more-btn"
+					data-sidebar-btn
+					aria-label="Expand Personal Details"
+					onClick={handleExpandToggleClick}
+				>
 					<span>Show Contacts</span>
 					<ExpandMoreOutlinedIcon />
 				</button>
@@ -43,7 +53,6 @@ const PersonalDetails: React.FC = () => {
 
 						<div className="contact-info">
 							<p className="contact-title">Email</p>
-
 							<a
 								href="mailto:contact.arnab16@gmail.com"
 								className="contact-link"
@@ -60,7 +69,6 @@ const PersonalDetails: React.FC = () => {
 
 						<div className="contact-info">
 							<p className="contact-title">Phone</p>
-
 							<a href="tel:+917004364281" className="contact-link">
 								{ProfileDetails.mobile}
 							</a>
@@ -74,7 +82,6 @@ const PersonalDetails: React.FC = () => {
 
 						<div className="contact-info">
 							<p className="contact-title">Location</p>
-
 							<address>{ProfileDetails.location}</address>
 						</div>
 					</li>

@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Arnab Deep | Frontend Developer",
-	description: "",
+	description:
+		"Hire a top-rated freelance React software engineer today! Expertise in React.js for web development, ready to elevate your projects.",
 };
 
 export default function RootLayout({
