@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
 				<h3 className="h3 form-title">Contact Form</h3>
 
 				<form
-					action="https://formsubmit.co/contact.arnab16@gmail.com"
+					action="https://formsubmit.co/350f5a48d02709b411a2b58c19a9a0c1 "
 					method="POST"
 					className="form"
 					data-form
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
 						<input
 							type="hidden"
 							name="_subject"
-							value="New email from portfolio!"
+							value="Hi Arnab, someone wants to reach you."
 						/>
 
 						<input type="hidden" name="_captcha" value="false" />
