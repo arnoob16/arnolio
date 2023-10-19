@@ -1,5 +1,60 @@
+"use client";
 import SendIcon from "@mui/icons-material/Send";
+import { KeyboardEvent, useState, useEffect } from "react";
+
+interface HybridHTMLInputEvent extends HTMLInputElement {
+	target?:
+		| {
+				name: string | null | undefined;
+				value: string | null | undefined;
+		  }
+		| null
+		| undefined;
+}
+
 const Contact: React.FC = () => {
+	const [disabled, setDisabled] = useState(false);
+	const [formValues, setFormValues] = useState<{
+		name: string;
+		email: string;
+		message: string;
+	}>({
+		email: "",
+		message: "",
+		name: "",
+	});
+
+	const verifyInputsOnKeystrokes = (
+		event: KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		const modifiedEvent = event as unknown as HybridHTMLInputEvent;
+		switch (modifiedEvent?.target?.name ?? "") {
+			case "email":
+				return setFormValues((prev) => ({
+					...prev,
+					email: modifiedEvent.target?.value ?? "",
+				}));
+			case "fullName":
+				return setFormValues((prev) => ({
+					...prev,
+					name: modifiedEvent.target?.value ?? "",
+				}));
+			case "message":
+				return setFormValues((prev) => ({
+					...prev,
+					message: modifiedEvent.target?.value ?? "",
+				}));
+			default:
+				return;
+		}
+	};
+
+	useEffect(() => {
+		setDisabled(
+			!(!!formValues.email && !!formValues.message && !!formValues.name)
+		);
+	}, [formValues]);
+
 	return (
 		<article className="contact" data-page="contact">
 			<header>
@@ -21,7 +76,7 @@ const Contact: React.FC = () => {
 				<h3 className="h3 form-title">Contact Form</h3>
 
 				<form
-					action="https://formsubmit.co/reachout.amansingh@gmail.com"
+					action="https://formsubmit.co/350f5a48d02709b411a2b58c19a9a0c1"
 					method="POST"
 					className="form"
 					data-form
@@ -37,11 +92,12 @@ const Contact: React.FC = () => {
 
 						<input
 							type="text"
-							name="fullname"
+							name="fullName"
 							className="form-input"
 							placeholder="Full name"
 							required
 							data-form-input
+							onKeyDown={verifyInputsOnKeystrokes}
 						/>
 
 						<input
@@ -51,6 +107,7 @@ const Contact: React.FC = () => {
 							placeholder="Email address"
 							required
 							data-form-input
+							onKeyDown={verifyInputsOnKeystrokes}
 						/>
 					</div>
 
@@ -60,9 +117,15 @@ const Contact: React.FC = () => {
 						placeholder="Your Message"
 						required
 						data-form-input
+						onKeyDown={verifyInputsOnKeystrokes}
 					></textarea>
 
-					<button className="form-btn" type="submit" disabled data-form-btn>
+					<button
+						className="form-btn"
+						type="submit"
+						disabled={disabled}
+						data-form-btn
+					>
 						<SendIcon />
 						<span>Send Message</span>
 					</button>

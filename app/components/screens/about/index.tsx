@@ -9,8 +9,8 @@ const About: React.FC = () => {
 
 			<section className="about-text">
 				<p>
-					I&apos;m a Software Engineer based in Jamshedpur, India. I&apos;ll fix
-					your problems React-ing with NextJs, ReactNative & Typescript.
+					I&apos;m a Software Engineer based in India. I&apos;ll fix your
+					problems React-ing with NextJs, ReactNative & Typescript.
 				</p>
 
 				<p>

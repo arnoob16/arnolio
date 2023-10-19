@@ -3,7 +3,7 @@ export enum ProfileDetails {
     designation = "Software Developer",
     email = "contact.arnab16@gmail.com",
     mobile = "7004364281",
-    location = "Jamshedpur 💛, India."
+    location = "Pune, India."
 }
 
 export const NAVIGATION_MENU_ITEMS = [

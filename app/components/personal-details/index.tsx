@@ -5,10 +5,11 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhonelinkRingOutlinedIcon from "@mui/icons-material/PhonelinkRingOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 import { ProfileDetails } from "@/app/constants";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 const PersonalDetails: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -38,7 +39,9 @@ const PersonalDetails: React.FC = () => {
 					onClick={handleExpandToggleClick}
 				>
 					<span>Show Contacts</span>
-					<ExpandMoreOutlinedIcon />
+					<ExpandMoreOutlinedIcon
+						className={isExpanded ? "rotateExpandIcon" : ""}
+					/>
 				</button>
 			</div>
 
@@ -117,6 +120,16 @@ const PersonalDetails: React.FC = () => {
 							className="social-link"
 						>
 							<TwitterIcon />
+						</a>
+					</li>
+
+					<li className="social-item">
+						<a
+							href="https://instagram.com/async_arnab.ts"
+							target="_blank"
+							className="social-link"
+						>
+							<InstagramIcon />
 						</a>
 					</li>
 				</ul>
