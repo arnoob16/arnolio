@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
 				<h3 className="h3 form-title">Contact Form</h3>
 
 				<form
-					action="https://formsubmit.co/350f5a48d02709b411a2b58c19a9a0c1"
+					action="https://formsubmit.co/contact.arnab16@gmail.com"
 					method="POST"
 					className="form"
 					data-form
