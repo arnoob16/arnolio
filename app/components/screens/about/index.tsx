@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 
 const About: React.FC = () => {
 	return (
@@ -79,6 +80,26 @@ const About: React.FC = () => {
 							<p className="service-item-text">
 								Let&apos;s create seamless cross-platform mobile solutions for
 								you.
+							</p>
+						</div>
+					</li>
+
+					<li className="service-item">
+						<div className="service-icon-box">
+							<img
+								className="serviceIcon"
+								src="/brainstorm.svg"
+								alt="Web development icon"
+								width="800"
+							/>
+						</div>
+
+						<div className="service-content-box">
+							<h4 className="h4 service-item-title">Brainstorming</h4>
+
+							<p className="service-item-text">
+								Let&apos;s explore the depths of your intriguing new idea
+								together.
 							</p>
 						</div>
 					</li>

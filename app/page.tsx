@@ -2,17 +2,9 @@
 import React, { useState } from "react";
 import PersonalDetails from "./components/personal-details";
 import Navbar from "./components/navbar";
-import dynamic from "next/dynamic";
-
-const AboutDynamic = dynamic(() => import("./components/screens/about"), {
-	ssr: true,
-});
-const ResumeDynamic = dynamic(() => import("./components/screens/resume"), {
-	ssr: true,
-});
-const ContactDynamic = dynamic(() => import("./components/screens/contact"), {
-	ssr: true,
-});
+import About from "./components/screens/about";
+import Resume from "./components/screens/resume";
+import Contact from "./components/screens/contact";
 
 const Home: React.FC = () => {
 	const [currentScreenIndex, setCurrentScreenIndex] = useState<number>(0);
@@ -25,10 +17,10 @@ const Home: React.FC = () => {
 					activeIndex={currentScreenIndex}
 					setCurrentScreenIndex={setCurrentScreenIndex}
 				/>
-				{currentScreenIndex === 0 && <AboutDynamic />}
-				{currentScreenIndex === 1 && <ResumeDynamic />}
+				{currentScreenIndex === 0 && <About />}
+				{currentScreenIndex === 1 && <Resume />}
 				{currentScreenIndex === 2 && <></>}
-				{currentScreenIndex === 3 && <ContactDynamic />}
+				{currentScreenIndex === 3 && <Contact />}
 			</div>
 		</main>
 	);
