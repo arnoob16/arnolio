@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhonelinkRingOutlinedIcon from "@mui/icons-material/PhonelinkRingOutlined";
@@ -10,6 +9,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 import { ProfileDetails } from "@/app/constants";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const PersonalDetails: React.FC = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -20,10 +20,12 @@ const PersonalDetails: React.FC = () => {
 		<aside className={`sidebar ${isExpanded ? "active" : ""}`} data-sidebar>
 			<div className="sidebar-info">
 				<figure className="avatar-box">
-					<img
-						src="/display-picture.png"
+					<Image
 						alt={`${ProfileDetails.name}'s Profile Picture`}
-						width={80}
+						src="/display-pic.jpeg"
+						width={1280}
+						height={1280}
+						className="avatar-icon"
 					/>
 				</figure>
 

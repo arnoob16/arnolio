@@ -285,6 +285,11 @@ main {
 	overflow: hidden;
 }
 
+.avatar-icon {
+	height: 80px;
+	width: 80px;
+}
+
 .info-content .name {
 	color: var(--white-2);
 	font-size: var(--fs-3);
@@ -1008,8 +1013,9 @@ textarea.form-input::-webkit-resizer {
 		gap: 25px;
 	}
 
-	.avatar-box img {
+	.avatar-icon {
 		width: 120px;
+		height: 120px;
 	}
 
 	.info-content .name {
