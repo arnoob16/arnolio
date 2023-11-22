@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import About from "./components/screens/about";
 import Resume from "./components/screens/resume";
 import Contact from "./components/screens/contact";
+import Projects from "./components/screens/projects";
 
 const Home: React.FC = () => {
 	const [currentScreenIndex, setCurrentScreenIndex] = useState<number>(0);
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
 				/>
 				{currentScreenIndex === 0 && <About />}
 				{currentScreenIndex === 1 && <Resume />}
-				{currentScreenIndex === 2 && <></>}
+				{currentScreenIndex === 2 && <Projects />}
 				{currentScreenIndex === 3 && <Contact />}
 			</div>
 		</main>

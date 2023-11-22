@@ -614,7 +614,12 @@ main {
 	margin-bottom: 8px;
 }
 
+.skill .title-wrapper .h5 {
+	flex: 1;
+}
+
 .skill .title-wrapper data {
+	flex: 2;
 	color: var(--light-gray);
 	font-size: var(--fs-7);
 	font-weight: var(--fw-300);
@@ -627,17 +632,8 @@ main {
 	margin-bottom: 10px;
 }
 
-.project-item {
-	display: none;
-}
-
-.project-item.active {
-	display: block;
-	animation: scaleUp 0.25s ease forwards;
-}
-
 @keyframes scaleUp {
-	0% {
+	80% {
 		transform: scale(0.5);
 	}
 	100% {
