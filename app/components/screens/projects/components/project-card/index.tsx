@@ -12,7 +12,6 @@ const ProjectCard: React.FC<Props> = ({
 	projectTitle,
 	redirectionUrl,
 }) => {
-	console.log("Hi", source);
 	return (
 		<li className="project-item">
 			<a href={redirectionUrl}>
