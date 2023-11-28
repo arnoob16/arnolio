@@ -9,8 +9,8 @@ type Project = {
 const Projects = () => {
 	const projects: Project[] = [
 		{
-			projectTitle: "Memeories",
-			redirectionUrl: "https://github.com/arnoob16/Memeories",
+			projectTitle: "Shoppers Stop - App",
+			redirectionUrl: "https://github.com/arnoob16/shoppers-stop",
 		},
 		{
 			projectTitle: "Unofficial GFG Api",
@@ -20,7 +20,10 @@ const Projects = () => {
 			projectTitle: "CP Api",
 			redirectionUrl: "https://github.com/arnoob16/cpAPI",
 		},
-		{ projectTitle: "Strapi driven Portfolio", redirectionUrl: "#" },
+		{
+			projectTitle: "Memeories",
+			redirectionUrl: "https://github.com/arnoob16/Memeories",
+		},
 		{
 			projectTitle: "Aapka Apna Doctor",
 			redirectionUrl: "https://github.com/zyberg2091/Aapka-Apna-Hiphop",
