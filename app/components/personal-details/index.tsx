@@ -100,6 +100,7 @@ const PersonalDetails: React.FC = () => {
 							href="https://github.com/arnoob16"
 							target="_blank"
 							className="social-link"
+							aria-label="link-for-github-profile"
 						>
 							<GitHubIcon />
 						</a>
@@ -110,6 +111,7 @@ const PersonalDetails: React.FC = () => {
 							href="https://www.linkedin.com/in/arnabdeep"
 							target="_blank"
 							className="social-link"
+							aria-label="link-for-linkedin-profile"
 						>
 							<LinkedInIcon />
 						</a>
@@ -120,6 +122,7 @@ const PersonalDetails: React.FC = () => {
 							href="https://twitter.com/arnab4srk"
 							target="_blank"
 							className="social-link"
+							aria-label="link-for-twitter-profile"
 						>
 							<TwitterIcon />
 						</a>
@@ -130,6 +133,7 @@ const PersonalDetails: React.FC = () => {
 							href="https://instagram.com/async_arnab.ts"
 							target="_blank"
 							className="social-link"
+							aria-label="link-for-instagram-profile"
 						>
 							<InstagramIcon />
 						</a>
