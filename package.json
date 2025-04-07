@@ -1,0 +1,36 @@
+{
+	"name": "arnolio",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "https://arnoob16.github.io/arnolio",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"export": "next export",
+		"start": "next start",
+		"lint": "next lint",
+		"predeploy": "cross-env GITHUB_PAGES=true yarn build && node addNoJekyll.js",
+		"deploy-to-github": "yarn predeploy && gh-pages -d build"
+	},
+	"dependencies": {
+		"@emotion/react": "11.11.1",
+		"@emotion/styled": "11.11.0",
+		"@material-ui/core": "4.12.4",
+		"@mui/icons-material": "5.14.12",
+		"@mui/material": "5.14.12",
+		"cross-env": "^7.0.3",
+		"gh-pages": "^6.3.0",
+		"next": "13.5.4",
+		"react": "18",
+		"react-dom": "18",
+		"react-pdf": "7.5.1"
+	},
+	"devDependencies": {
+		"@types/node": "20",
+		"@types/react": "18",
+		"@types/react-dom": "18",
+		"eslint": "8",
+		"eslint-config-next": "13.5.4",
+		"typescript": "5"
+	}
+}
