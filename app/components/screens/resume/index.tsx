@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import Timeline from "./partials/timeline";
 import SkillStrip from "./components/skills-strip";
 
@@ -35,26 +34,21 @@ const Resume: React.FC = () => {
 			Experience: [
 				{
 					what: [
-						"Improved the loading speed of 20 screens to under 0.5 seconds and enhanced the performance of 8 web-pages elevating Lighthouse scores to 90+ resulting in reduced load time by 40% ",
-						"Enhanced monitoring functionality by introducing real - time alerting for critical APIs and page crashes within Grafana, leading to a 31% improvement in journey uptimes.",
-						"Guided and provided mentorship to 2 interns across various features, facilitating the development of optimized cross-platform user experiences.",
+						"Developed and optimized reusable file-upload components with customizable constraints, image compression, and cropping, streamlining the management of over 8,000 health files daily.",
+						"Engineered a cost-efficient localization solution, enabling support for over 10 locales on the website.",
+						"Implemented manual cache-busting in a react app, ensuring users always received the latest updates and improving overall user experience.",
+						"Optimized application efficiency by reducing API calls by 50% through React Query’s stale time configuration, decreasing backend resource usage and eliminating redundant requests.",
+						"Improved monitoring and reliability by integrating ELK, Google Analytics, and Microsoft Clarity, while introducing real-time alerting for critical APIs and page crashes in Grafana, resulting in a 40% reduction in page crashes and achieving 99% overall uptime.",
+						"Actively mentored junior developers fostering growth and ensuring code quality through peer reviews."
 					],
-					when: "October 2023 - Present",
+					when: "July 2022 - Present",
 					where: "Bajaj Finserv Health Limited - Software Engineer - II",
 				},
 				{
 					what: [
-						"Designed a highly versatile file-upload component with customizable constraints, image compression, and image cropping, which found application in four separate user journeys within a React Native application. This component manages a daily traffic volume of over 5000 files.",
-						"Implemented a budget-conscious localization solution to address a critical client requirement, enabling support for over 10 different locales across the website.",
-						"Enhanced code coverage in a React Native project from 0% to 34% and elevated coverage from 42% to 60% in a Next.js project through the creation of Jest unit test cases.",
-					],
-					when: "July 2022 - September 2023",
-					where: "Bajaj Finserv Health Limited - Software Engineer - I",
-				},
-				{
-					what: [
-						"Employed React Native and TypeScript to construct screens with impeccable designs, ensuring responsiveness, high performance, and accessibility. These screens effectively supported a daily influx of approximately 500 successful claims.",
-						"Migrated the squad’s codebase to TypeScript and enhanced code quality by reducing vulnerabilities and code-smells on sonarqube to 0.",
+						"Implemented SonarQube Pipeline to transform code quality, slashing code smells by 50% and reducing duplications from 25% to 2%.",
+						"Enhanced application performance by decreasing screen load times to under 0.5 seconds across 25 screens, delivering a more seamless user experience.",
+						"Enhanced application security by replacing base64 encoding with multipart file upload."
 					],
 					when: "January 2022 - June 2022",
 					where: "Bajaj Finserv Health Limited - Software Engineer - Intern",
@@ -65,13 +59,15 @@ const Resume: React.FC = () => {
 
 	const skills: Skills = useMemo(() => {
 		return {
-			Languages: "JavaScript, TypeScript, HTML, CSS",
+			Languages: "JavaScript, Typescript, HTML, CSS",
 			"Libraries & Frameworks":
-				"ReactJS, NextJS, ReactNative, Redux, React-query",
+				"ReactJS, NextJS, ReactNative, Redux, React-query, Tailwind, Material-UI",
 			Technologies:
 				"Git, Github, Azure Devops, VS Code, Chrome Devtools, Android Studio, XCode",
 			"Familiar with":
-				"Python & Flask, Node & ExpressJS, Web Scraping, API Development, Java",
+				"Python, Flask, Node & ExpressJS, Web Scraping, API Development, Java",
+			"Developer Tools":
+				"Git, VS Code, Postman, Xcode, Android Studio, Azure Devops, Elastic Search (ELK), Microsoft Clarity, Google Analytics, SonarQube"
 		};
 	}, []);
 
